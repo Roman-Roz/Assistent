@@ -1,0 +1,52 @@
+name: Documentation Issue
+description: Report an issue with documentation
+title: "[Docs]: "
+labels: ["documentation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation!
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: What type of documentation issue is this?
+      options:
+        - Missing documentation
+        - Incorrect information
+        - Unclear explanation
+        - Broken link
+        - Typos or grammar
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL (if applicable)
+      description: Link to the documentation page with the issue
+      placeholder: https://github.com/openclaw/openclaw/blob/main/README.md
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: What's wrong or missing in the documentation?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: How do you think we should fix this?
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Would you like to contribute a fix?
+      options:
+        - label: Yes, I'd like to submit a PR to fix this
