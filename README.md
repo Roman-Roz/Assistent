@@ -96,7 +96,12 @@ Model note: while many providers and models are supported, prefer a current flag
 
 ## Install (recommended)
 
-Runtime: **Node 24 (recommended) or Node 22.14+**.
+**Runtime:** Node 24 (recommended) or Node 22.14+  
+**System Requirements:**
+- **CPU:** 2+ cores (4+ recommended for local models)
+- **RAM:** 2GB minimum (8GB+ recommended for local models)
+- **Disk:** 500MB for installation + workspace space
+- **OS:** macOS 12+, Linux (systemd), Windows 10+ (WSL2 recommended)
 
 ```bash
 npm install -g openclaw@latest
@@ -109,7 +114,7 @@ OpenClaw Onboard installs the Gateway daemon (launchd/systemd user service) so i
 
 ## Quick start (TL;DR)
 
-Runtime: **Node 24 (recommended) or Node 22.14+**.
+**Runtime:** Node 24 (recommended) or Node 22.14+
 
 Full beginner guide (auth, pairing, channels): [Getting started](https://docs.openclaw.ai/start/getting-started)
 
@@ -177,7 +182,10 @@ Run `openclaw doctor` to surface risky/misconfigured DM policies.
 - Remote + web: [Gateway](https://docs.openclaw.ai/gateway), [Remote access](https://docs.openclaw.ai/gateway/remote), [Tailscale](https://docs.openclaw.ai/gateway/tailscale), [Web surfaces](https://docs.openclaw.ai/web)
 - Tools + automation: [Tools](https://docs.openclaw.ai/tools), [Skills](https://docs.openclaw.ai/tools/skills), [Cron jobs](https://docs.openclaw.ai/automation/cron-jobs), [Webhooks](https://docs.openclaw.ai/automation/webhook), [Gmail Pub/Sub](https://docs.openclaw.ai/automation/gmail-pubsub)
 - Internals: [Architecture](https://docs.openclaw.ai/concepts/architecture), [Agent](https://docs.openclaw.ai/concepts/agent), [Session model](https://docs.openclaw.ai/concepts/session), [Gateway protocol](https://docs.openclaw.ai/reference/rpc)
-- Troubleshooting: [Channel troubleshooting](https://docs.openclaw.ai/channels/troubleshooting), [Logging](https://docs.openclaw.ai/logging), [Docs home](https://docs.openclaw.ai)
+- Troubleshooting:
+  - **Common issues:** [Channel troubleshooting](https://docs.openclaw.ai/channels/troubleshooting), [Connection issues](https://docs.openclaw.ai/help/connection-issues), [Auth errors](https://docs.openclaw.ai/help/auth-errors)
+  - **Debugging:** [Logging](https://docs.openclaw.ai/logging), [Diagnostic commands](https://docs.openclaw.ai/help/diagnostics)
+  - **Resources:** [Docs home](https://docs.openclaw.ai), [FAQ](https://docs.openclaw.ai/help/faq), [Discord support](https://discord.gg/clawd)
 
 ## Apps (optional)
 
