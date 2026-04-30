@@ -1,4 +1,20 @@
-with open('src/infra/heartbeat-runner.ts', 'r') as f:
+#!/usr/bin/env python3
+"""
+Fix script for heartbeat-runner.ts
+
+This script applies fixes to the heartbeat runner if the file exists.
+If the file doesn't exist, the script exits gracefully.
+"""
+import os
+import sys
+
+target_file = 'src/infra/heartbeat-runner.ts'
+
+if not os.path.exists(target_file):
+    print(f"Warning: {target_file} does not exist. Skipping fixes.")
+    sys.exit(0)
+
+with open(target_file, 'r') as f:
     content = f.read()
 
 # Fix 1: Add heartbeatFileContent param to resolveHeartbeatRunPrompt
@@ -78,7 +94,7 @@ new_call = """  const { prompt, hasExecCompletion, hasCronEvents } = resolveHear
 
 content = content.replace(old_call, new_call)
 
-with open('src/infra/heartbeat-runner.ts', 'w') as f:
+with open(target_file, 'w') as f:
     f.write(content)
 
 print("Fix #2 applied: HEARTBEAT.md directives preserved in task-mode prompt")
